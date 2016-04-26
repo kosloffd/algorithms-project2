@@ -53,13 +53,13 @@ int main(int argc, char *argv[]) {
 
     // Confirm successful opening of the .txt file for input
     if (!fin.is_open()) {
-        cout << "\nThe text file " << filenameIn << " could not be opened. Try again.";
+        cout << "\nThe text file " << filenameIn << ".txt could not be opened. Try again.";
         exit(1);
     }
 
     // Confirm successful opening of the .txt file for output
     if (!fout.is_open()) {
-        cout << "\nThe text file " << filenameIn + ".txt" << " could not be opened. Try again.";
+        cout << "\nThe text file " << filenameOut + ".txt could not be opened. Try again.";
         exit(1);
     }
 
@@ -82,15 +82,54 @@ int main(int argc, char *argv[]) {
     switch(choice) {
         case 1:
             cout << "\nExecuting brute force algorithm." << endl;
-            values = getValues(fin, filenameIn);
+
+            while (lineCount > 0) {
+                values = getValues(fin, filenameIn);
+                amount = getAmount(fin, filenameIn);
+
+                if (!(values.empty())) {
+                    changeslow(amount, values);
+                    lineCount--;
+                }
+
+                else
+                    break;
+            }
+
             break;
 
         case 2:
             cout << "\nExecuting greedy algorithm." << endl;
+            while (lineCount > 0) {
+                values = getValues(fin, filenameIn);
+                amount = getAmount(fin, filenameIn);
+
+                if (!(values.empty())) {
+                    // algorithm function here
+                    lineCount--;
+                }
+
+                else
+                    break;
+            }
+
             break;
 
         case 3:
             cout << "\nExecuting dynamic programming algorithm." << endl;
+
+            while (lineCount > 0) {
+                values = getValues(fin, filenameIn);
+                amount = getAmount(fin, filenameIn);
+
+                if (!(values.empty())) {
+                    // algorithm function here
+                    lineCount--;
+                }
+
+                else
+                    break;
+            }
             break;
 
         case 0:
