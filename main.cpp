@@ -63,15 +63,6 @@ int main(int argc, char *argv[]) {
         exit(1);
     }
 
-    // File is open, print some information to the screen
-    if (fin.is_open()) {
-        cout << "\nOpening " << argv[1] << "...";
-        // get first line from argv[1] and store in str
-        getline(fin, str);
-        cout << "\nCalculating minimum coins to make amount " << amount << " from\n"
-                "denominations of " << str << ".\n";
-    }
-
     printMenu();
     int choice = -1;
     cin >> choice;
