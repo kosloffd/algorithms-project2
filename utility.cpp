@@ -60,3 +60,14 @@ std::vector<int> getValues(std::ifstream &fin, std::string file) {
 
     return arrValues;
 }
+
+int getAmount(std::ifstream &fin, std::string file) {
+    int amount;                         // Stores the int to be returned
+    std::string str;                    // Stores the string that getline captures
+    getline(fin, str);                  // Get the next line from the file
+                                        // The next line is only the value
+    amount = atoi(str.c_str());         // convert a string with ony an int to int
+
+    return amount;
+}
+

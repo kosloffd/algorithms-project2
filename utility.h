@@ -14,4 +14,6 @@ int countLines(std::ifstream& fin, std::string str);
 
 std::vector<int> getValues(std::ifstream &fin, std::string file);
 
+int getAmount(std::ifstream& fin, std::string file);
+
 #endif
