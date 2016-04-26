@@ -43,7 +43,7 @@ std::vector<int> getValues(std::ifstream &fin, std::string file) {
     str.erase(std::remove(str.begin(), str.end(), ' '), str.end());
     str.erase(std::remove(str.begin(), str.end(), '['), str.end());
     str.erase(std::remove(str.begin(), str.end(), ']'), str.end());
-    std::cout << str << std::endl;
+
 
     // Load the string str into a string stream
     std::stringstream ss(str);
