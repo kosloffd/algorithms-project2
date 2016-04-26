@@ -14,7 +14,7 @@
 
 # Declaration of variables
 CC = g++
-CC_FLAGS = -w
+CC_FLAGS = -w -std=c++11
 
 # File names
 EXEC = main
