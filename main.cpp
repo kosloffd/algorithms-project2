@@ -5,6 +5,7 @@
 
 #include "bruteforce.h"
 #include "utility.h"
+#include "greedy.h"
 
 using std::cout;
 using std::cin;
@@ -96,7 +97,7 @@ int main(int argc, char *argv[]) {
                 amount = getAmount(fin, filenameIn);
 
                 if (!(values.empty())) {
-                    // algorithm function here
+                    changegreedy(amount, values);
                     lineCount--;
                 }
 
