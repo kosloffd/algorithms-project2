@@ -1,6 +1,8 @@
 #ifndef BRUTEFORCE_H
 #define BRUTEFORCE_H
 
-void changeslow(int amount, int *values);
+#include <vector>
+
+void changeslow(int amount, std::vector<int> values);
 
 #endif
